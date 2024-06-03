@@ -18,11 +18,11 @@ namespace Ecommerce_Backend.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly EcommerceContext _context;
+        private readonly UserContext _context;
         private readonly IConfiguration _configuration;
         private readonly JwtTokenService _jwtTokenService;
 
-        public AuthController(EcommerceContext context, JwtTokenService jwtTokenService)
+        public AuthController(UserContext context, JwtTokenService jwtTokenService)
         {
             _context = context;
             _jwtTokenService = jwtTokenService;

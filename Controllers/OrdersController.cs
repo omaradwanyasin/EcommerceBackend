@@ -11,24 +11,24 @@ namespace Ecommerce_Backend.Controllers
         {
             OrderDto = ordersDto;
         }
-        [HttpGet]
-        [Route("/order")]
-        public async Task<IActionResult> order()
-        {
-            ///should call the function in repo 
-        }
-        [HttpPost]
-        [Route("order")]
-        public async Task<IActionResult> AddOrder()
-        {
-            //call the function inside the repo cart
-        }
-        [HttpDelete]
-        [Route("/order")]
-        public async Task<IActionResult> DeleteOrder()
-        {
+        //[HttpGet]
+        //[Route("/order")]
+        //public async Task<IActionResult> order()
+        //{
+        //    ///should call the function in repo 
+        //}
+        //[HttpPost]
+        //[Route("order")]
+        //public async Task<IActionResult> AddOrder()
+        //{
+        //    //call the function inside the repo cart
+        //}
+        //[HttpDelete]
+        //[Route("/order")]
+        //public async Task<IActionResult> DeleteOrder()
+        //{
 
-        }
+        //}
 
     }
 }

@@ -25,6 +25,9 @@ namespace Ecommerce_Backend
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json",
+                                                         "User API v1"));
             }
 
             app.UseHttpsRedirection();
@@ -40,17 +43,13 @@ namespace Ecommerce_Backend
             });
 
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "EcommercePlatformAPI v1");
-            });
+           
 
 
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<EcommerceContext>(options =>
+            services.AddDbContext<UserContext>(options =>
        options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddControllers();
@@ -82,10 +81,9 @@ namespace Ecommerce_Backend
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "EcommercePlatformAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "UserAPI", Version = "v1" });
             });
         }
 
-        // Other methods like Configure()...
     }
 }

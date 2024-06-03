@@ -1,10 +1,17 @@
-﻿namespace Ecommerce_Backend.Business.Dto
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Ecommerce_Backend.Business.Dto
 {
     public class ProductDto
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public decimal Price { get; set; }
+        public int ProductId { get; set; }
+
+        [Required]
+        public string? ProductName { get; set; }
+
+        [Required]
+        public string? ProductDescrption { get; set; }
+
+        public string? ProductPrice  { get; set; }
     }
 }
