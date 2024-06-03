@@ -1,6 +1,8 @@
 ﻿namespace Ecommerce_Backend.Controllers
 {
-    public class Class7
+    public class OrdersController
     {
+
+       
     }
 }
